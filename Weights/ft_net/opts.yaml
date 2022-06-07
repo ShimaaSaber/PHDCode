@@ -1,0 +1,9 @@
+alpha: 1.0
+batchsize: 24
+best_accuracy: 0
+data_dir: Dataset/market1501
+erasing_p: 0.5
+lr: 0.04
+model: !!python/name:Model.Network.Layer_1 ''
+name: /Layer_1
+train_all: false
