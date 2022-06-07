@@ -7,12 +7,7 @@ Created on Sun Dec 26 12:37:20 2021
 
 import torch
 import torch.nn as nn
-
 from torchvision import models
-# from .Baseline import ResNet, Block
-# from .Classifier import ClassBlock
-# from .Attention import Attention
-
 from torch.nn import init
 
 #####################################################################################
@@ -218,8 +213,8 @@ class Network(nn.Module):
 
     def __init__(self, class_num):
         super(Network, self).__init__()
-        baseline = models.resnet101(pretrained=False)
-        # baseline = ResNet(Block,[3, 4, 23, 3], 3, 1000)
+        trained=False
+        baseline = models.resnet101(trained)        
         baseline.avgpool = nn.AdaptiveAvgPool2d((1, 1))
         model = baseline
         self.conv1 = model.conv1
